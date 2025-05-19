@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Vite in Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "Start Vite Dev Server",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "vite:///src/*": "${workspaceFolder}/src/*",
+        "/@fs/*": "${workspaceFolder}/*"
+      },
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
