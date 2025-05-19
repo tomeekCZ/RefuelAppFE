@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0) saturate(1000%) sepia(100%) hue-rotate(160deg) brightness(1.2);
+  cursor: pointer;
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.2s ease-out forwards;
+}
+
+.leaflet-container {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.leaflet-tile {
+  filter: grayscale(100%) contrast(120%) brightness(105%);
+}
+
+.leaflet-pane {
+  z-index: 0 !important;
+}
